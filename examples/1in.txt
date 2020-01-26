@@ -1,0 +1,15 @@
+push 4
+push 5
+dump
+add
+dump
+in
+in
+dump
+add
+add
+dump
+meow 5
+hlt
+
+

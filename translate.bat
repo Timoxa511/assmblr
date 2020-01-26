@@ -1,0 +1,1 @@
+@ start "" "Source/translator.exe" %*

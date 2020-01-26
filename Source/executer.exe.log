@@ -1,0 +1,1442 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\executer.cpp, строка: 101, функция: void run(char*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "in".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-05 00:00:00 +0300], Instance: 0x00000000005758C0 (64-bit), Flags: Cmdre0, Thread: 0xA78 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040F1A7 in W:\craft-place\DSA\cool\assmblr\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9326)
+
+# 1 0x00000000004278F5 in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/executer.cpp (101):
+
+     99: 
+    100:     FILE* in = fopen (fname, "r");
+=>  101:     assert (in);
+    102: 
+    103: 
+
+# 2 0x0000000000428000 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (319):
+
+    317:     Stack = &stack;
+    318: 
+=>  319:     run("");
+    320: 
+    321:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-05 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan  9 2020 13:32:50, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 09 2020 13:32:56
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\executer.cpp, строка: 101, функция: void run(char*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "in".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-05 00:00:00 +0300], Instance: 0x00000000005758C0 (64-bit), Flags: Cmdre0, Thread: 0x189C (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040F1A7 in W:\craft-place\DSA\cool\assmblr\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9326)
+
+# 1 0x00000000004278F5 in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/executer.cpp (101):
+
+     99: 
+    100:     FILE* in = fopen (fname, "r");
+=>  101:     assert (in);
+    102: 
+    103: 
+
+# 2 0x0000000000428000 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (319):
+
+    317:     Stack = &stack;
+    318: 
+=>  319:     run("");
+    320: 
+    321:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-05 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 11 2020 21:55:06, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 11 2020 21:55:11
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\executer.cpp, строка: 116, функция: void run(const char*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "ret > 0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-10 00:00:00 +0300], Instance: 0x00000000005768D0 (64-bit), Flags: Cmdre0, Thread: 0x18C8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040F587 in W:\craft-place\DSA\cool\assmblr\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9463)
+
+# 1 0x0000000000428102 in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/executer.cpp (116):
+
+    114: 
+    115:         int ret = sscanf(buf, "%d%n", &cmd, &nchars);
+=>  116:         assert (ret > 0);
+    117: 
+    118: 
+
+# 2 0x00000000004287BC in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (328):
+
+    326:     Stack = &stack;
+    327: 
+=>  328:     run("output/2.txt");
+    329: 
+    330:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-10 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 11 2020 23:21:08, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 11 2020 23:21:30
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\executer.cpp, строка: 116, функция: void run(const char*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "ret > 0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-10 00:00:00 +0300], Instance: 0x00000000005768D0 (64-bit), Flags: Cmdre0, Thread: 0x1B1C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040F587 in W:\craft-place\DSA\cool\assmblr\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9463)
+
+# 1 0x0000000000428102 in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/executer.cpp (116):
+
+    114: 
+    115:         int ret = sscanf(buf, "%d%n", &cmd, &nchars);
+=>  116:         assert (ret > 0);
+    117: 
+    118: 
+
+# 2 0x00000000004287BC in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (328):
+
+    326:     run("output/2.txt");
+    327: 
+=>  328:     }
+    329: 
+    330: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-10 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 11 2020 23:21:08, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 11 2020 23:24:49
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0000000000442C75 в функции __mingw_sformat() в файле C:/temp/gcc/build-mingw-w64/mingw-w64-crt/../../src/mingw-w64-crt/stdio/mingw_vfscanf.c на строке 1122. Попытка записать данные по адресу 0x00000000FFFFFFFF. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-10 00:00:00 +0300], Instance: 0x00000000005798D0 (64-bit), Flags: Cmdre0, Thread: 0x2AC (Main), errno: 2 (No such file or directory), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000442C75 in W:\craft-place\DSA\cool\assmblr\executer.exe: __mingw_sformat() at C:/temp/gcc/build-mingw-w64/mingw-w64-crt/../../src/mingw-w64-crt/stdio/mingw_vfscanf.c (1122)
+# 1 0x00000000004435AF in W:\craft-place\DSA\cool\assmblr\executer.exe: __mingw_vfscanf() at C:/temp/gcc/build-mingw-w64/mingw-w64-crt/../../src/mingw-w64-crt/stdio/mingw_vfscanf.c (1620)
+
+# 2 0x0000000000454EB7 in W:\craft-place\DSA\cool\assmblr\executer.exe: fscanf() at c:/program files (x86)/codeblocks/mingw/x86_64-w64-mingw32/include/stdio.h (296):
+
+    294:   int __retval;
+    295:   __builtin_va_list __local_argv; __builtin_va_start( __local_argv, __format );
+=>  296:   __retval = __mingw_vfscanf( __stream, __format, __local_argv );
+    297:   __builtin_va_end( __local_argv );
+    298:   return __retval;
+
+# 3 0x000000000042808B in W:\craft-place\DSA\cool\assmblr\executer.exe: fillprog() at W:/craft-place/DSA/cool/assmblr/executer.cpp (34):
+
+     32: 
+     33:     int buf = -1;
+=>   34:     while (fscanf (_in, "%d", buf) != -1)
+     35:         {
+     36:         program_.push_back(buf);
+
+# 4 0x0000000000428CD4 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (82):
+
+     80:     CPU cpu;
+     81: 
+=>   82:     cpu.fillprog ("output/1.txt");
+     83:     cpu.run ();
+     84:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-10 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 13 2020 00:18:28, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 13 2020 00:18:37
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0000000000442C75 в функции __mingw_sformat() в файле C:/temp/gcc/build-mingw-w64/mingw-w64-crt/../../src/mingw-w64-crt/stdio/mingw_vfscanf.c на строке 1122. Попытка записать данные по адресу 0x00000000FFFFFFFF. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-10 00:00:00 +0300], Instance: 0x00000000005798D0 (64-bit), Flags: Cmdre0, Thread: 0x2AC (Main), errno: 2 (No such file or directory), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000442C75 in W:\craft-place\DSA\cool\assmblr\executer.exe: __mingw_sformat() at C:/temp/gcc/build-mingw-w64/mingw-w64-crt/../../src/mingw-w64-crt/stdio/mingw_vfscanf.c (1122)
+# 1 0x00000000004435AF in W:\craft-place\DSA\cool\assmblr\executer.exe: __mingw_vfscanf() at C:/temp/gcc/build-mingw-w64/mingw-w64-crt/../../src/mingw-w64-crt/stdio/mingw_vfscanf.c (1620)
+
+# 2 0x0000000000454EB7 in W:\craft-place\DSA\cool\assmblr\executer.exe: fscanf() at c:/program files (x86)/codeblocks/mingw/x86_64-w64-mingw32/include/stdio.h (296):
+
+    294:   int __retval;
+    295:   __builtin_va_list __local_argv; __builtin_va_start( __local_argv, __format );
+=>  296:   __retval = __mingw_vfscanf( __stream, __format, __local_argv );
+    297:   __builtin_va_end( __local_argv );
+    298:   return __retval;
+
+# 3 0x000000000042808B in W:\craft-place\DSA\cool\assmblr\executer.exe: fillprog() at W:/craft-place/DSA/cool/assmblr/executer.cpp (34):
+
+     32: 
+     33:     int buf = -1;
+=>   34:     while (fscanf (_in, "%d", buf) != -1)
+     35:         {
+     36:         program_.push_back(buf);
+
+# 4 0x0000000000428CD4 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (82):
+
+     80:     CPU cpu;
+     81: 
+=>   82:     cpu.fillprog ("output/1.txt");
+     83:     cpu.run ();
+     84:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-10 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 13 2020 00:18:28, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 13 2020 00:18:37
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000031D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x3D8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532052 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005295A5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AF046 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 5 0x0000000000524300 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 6 0x000000000042A830 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (31):
+
+     29: int CPU::get_par (int counter, int parn)
+     30:         {
+=>   31:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     32: 
+     33:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AADB in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BF54 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (95):
+
+     93: 
+     94:     cpu.fillprog ("output/1.txt");
+=>   95:     cpu.run ();
+     96:     }
+     97: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 16:58:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 16:58:45
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x00000000007DD850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x19B0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532052 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005295A5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AF046 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 5 0x0000000000524300 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 6 0x000000000042A830 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (31):
+
+     29: int CPU::get_par (int counter, int parn)
+     30:         {
+=>   31:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     32: 
+     33:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AADB in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BF54 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (95):
+
+     93: 
+     94:     cpu.fillprog ("output/1.txt");
+=>   95:     cpu.run ();
+     96:     }
+     97: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 16:58:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:01:32
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x00000000008BD850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x15EC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532052 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005295A5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AF046 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 5 0x0000000000524300 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 6 0x000000000042A830 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (31):
+
+     29: int CPU::get_par (int counter, int parn)
+     30:         {
+=>   31:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     32: 
+     33:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AADB in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BF54 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (95):
+
+     93: 
+     94:     cpu.fillprog ("output/1.txt");
+=>   95:     cpu.run ();
+     96:     }
+     97: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 16:58:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:03:11
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000097D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x1A4C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532052 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005295A5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AF046 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 5 0x0000000000524300 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 6 0x000000000042A830 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (31):
+
+     29: int CPU::get_par (int counter, int parn)
+     30:         {
+=>   31:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     32: 
+     33:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AADB in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BF54 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (95):
+
+     93: 
+     94:     cpu.fillprog ("output/1.txt");
+=>   95:     cpu.run ();
+     96:     }
+     97: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 16:58:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:04:14
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000031D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x968 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E02 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x0000000000529355 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEE26 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 5 0x00000000005240B0 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (96):
+
+     94:     cpu.fillprog ("output/1.txt");
+     95:     cpu.run ();
+=>   96:     }
+     97: 
+     98: 
+
+# 6 0x000000000042A830 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (31):
+
+     29: int CPU::get_par (int counter, int parn)
+     30:         {
+=>   31:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     32: 
+     33:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AADB in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BF54 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (95):
+
+     93: 
+     94:     cpu.fillprog ("output/1.txt");
+=>   95:     cpu.run ();
+     96:     }
+     97: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:04:20, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:04:28
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000078D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x1AF0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E62 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005293B5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEE86 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (98):
+
+     96:     cpu.fillprog ("output/1.txt");
+     97:     cpu.run ();
+=>   98:     }
+     99: 
+    100: 
+
+# 5 0x0000000000524110 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (98):
+
+     96:     cpu.fillprog ("output/1.txt");
+     97:     cpu.run ();
+=>   98:     }
+     99: 
+    100: 
+
+# 6 0x000000000042A88C in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (33):
+
+     31:         assert (parn > 0);
+     32: 
+=>   33:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     34: 
+     35:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AB37 in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BFB0 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (97):
+
+     95: 
+     96:     cpu.fillprog ("output/1.txt");
+=>   97:     cpu.run ();
+     98:     }
+     99: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:06:55, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:07:00
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000031D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x11DC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E82 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005293D5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEEA6 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (100):
+
+     98:     cpu.fillprog ("output/1.txt");
+     99:     cpu.run ();
+=>  100:     }
+    101: 
+    102: 
+
+# 5 0x0000000000524130 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (100):
+
+     98:     cpu.fillprog ("output/1.txt");
+     99:     cpu.run ();
+=>  100:     }
+    101: 
+    102: 
+
+# 6 0x000000000042A8B2 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (35):
+
+     33:         printf ("COUNTER = %d, parn = %d, (counter + (parn)*2 = %d\n", counter, parn, (counter + (parn)*2));
+     34: 
+=>   35:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     36: 
+     37:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AB5D in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BFD6 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (99):
+
+     97: 
+     98:     cpu.fillprog ("output/1.txt");
+=>   99:     cpu.run ();
+    100:     }
+    101: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:08:43, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:08:48
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000083D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x17EC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E92 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005293E5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEEB6 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (101):
+
+     99:     cpu.fillprog ("output/1.txt");
+    100:     cpu.run ();
+=>  101:     }
+    102: 
+    103: 
+
+# 5 0x0000000000524140 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (101):
+
+     99:     cpu.fillprog ("output/1.txt");
+    100:     cpu.run ();
+=>  101:     }
+    102: 
+    103: 
+
+# 6 0x000000000042A8B2 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (35):
+
+     33:         printf ("COUNTER = %d, parn = %d, (counter + (parn)*2 = %d\n", counter, parn, (counter + (parn)*2));
+     34: 
+=>   35:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     36: 
+     37:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AB6D in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BFE6 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (100):
+
+     98: 
+     99:     cpu.fillprog ("output/1.txt");
+=>  100:     cpu.run ();
+    101:     }
+    102: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:10:46, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:10:52
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000031D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x10B8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E92 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005293E5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEEB6 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (101):
+
+     99:     cpu.fillprog ("output/1.txt");
+    100:     cpu.run ();
+=>  101:     }
+    102: 
+    103: 
+
+# 5 0x0000000000524140 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (101):
+
+     99:     cpu.fillprog ("output/1.txt");
+    100:     cpu.run ();
+=>  101:     }
+    102: 
+    103: 
+
+# 6 0x000000000042A8B2 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (35):
+
+     33:         printf ("COUNTER = %d, parn = %d, (counter + (parn)*2 = %d\n", counter, parn, (counter + (parn)*2));
+     34: 
+=>   35:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     36: 
+     37:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AB6D in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BFE6 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (100):
+
+     98: 
+     99:     cpu.fillprog ("output/1.txt");
+=>  100:     cpu.run ();
+    101:     }
+    102: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:10:46, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:14:28
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000031D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x684 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E92 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x00000000005293E5 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEEB6 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (101):
+
+     99:     cpu.fillprog ("output/1.txt");
+    100:     cpu.run ();
+=>  101:     }
+    102: 
+    103: 
+
+# 5 0x0000000000524140 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (101):
+
+     99:     cpu.fillprog ("output/1.txt");
+    100:     cpu.run ();
+=>  101:     }
+    102: 
+    103: 
+
+# 6 0x000000000042A8B2 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (35):
+
+     33:         printf ("COUNTER = %d, parn = %d, (counter + (parn)*2 = %d\n", counter, parn, (counter + (parn)*2));
+     34: 
+=>   35:         if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     36: 
+     37:         return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AB6D in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (12):
+
+     10: #define SETCOUNTER(N) COUNTER = (N)
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,  2,
+     13:     {
+     14:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BFE6 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (100):
+
+     98: 
+     99:     cpu.fillprog ("output/1.txt");
+=>  100:     cpu.run ();
+    101:     }
+    102: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:10:46, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:15:44
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000078D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x1004 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E32 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x0000000000529385 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEE56 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (110):
+
+    108:     cpu.fillprog ("output/1.txt");
+    109:     cpu.run ();
+=>  110:     }
+    111: 
+    112: 
+
+# 5 0x00000000005240E0 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (110):
+
+    108:     cpu.fillprog ("output/1.txt");
+    109:     cpu.run ();
+=>  110:     }
+    111: 
+    112: 
+
+# 6 0x000000000042BEC6 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (90):
+
+     88:     printf ("COUNTER = %d, parn = %d, (counter + (parn)*2 = %d\n", counter, parn, (counter + (parn)*2));
+     89: 
+=>   90:     if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     91: 
+     92:     return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AA31 in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCOUNTER(N) COUNTER = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BF89 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (109):
+
+    107: 
+    108:     cpu.fillprog ("output/1.txt");
+=>  109:     cpu.run ();
+    110:     }
+    111: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:24:08, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:24:13
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000031D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x1AEC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E32 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x0000000000529385 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEE56 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (110):
+
+    108:     cpu.fillprog ("output/1.txt");
+    109:     cpu.run ();
+=>  110:     }
+    111: 
+    112: 
+
+# 5 0x00000000005240E0 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (110):
+
+    108:     cpu.fillprog ("output/1.txt");
+    109:     cpu.run ();
+=>  110:     }
+    111: 
+    112: 
+
+# 6 0x000000000042BEC6 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (90):
+
+     88:     printf ("COUNTER = %d, parn = %d, (counter + (parn)*2 = %d\n", counter, parn, (counter + (parn)*2));
+     89: 
+=>   90:     if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     91: 
+     92:     return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AA31 in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCOUNTER(N) COUNTER = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BF89 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (109):
+
+    107: 
+    108:     cpu.fillprog ("output/1.txt");
+=>  109:     cpu.run ();
+    110:     }
+    111: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:29:56, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:30:01
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000031D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x32C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E42 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x0000000000529395 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEE66 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (110):
+
+    108:     cpu.fillprog ("output/1.txt");
+    109:     cpu.run ();
+=>  110:     }
+    111: 
+    112: 
+
+# 5 0x00000000005240F0 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (110):
+
+    108:     cpu.fillprog ("output/1.txt");
+    109:     cpu.run ();
+=>  110:     }
+    111: 
+    112: 
+
+# 6 0x000000000042BED2 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (90):
+
+     88:     printf ("COUNTER = %d, parn = %d, (counter + (parn)*2 = %d\n", counter, parn, (counter + (parn)*2));
+     89: 
+=>   90:     if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     91: 
+     92:     return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AA3D in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCOUNTER(N) COUNTER = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     printf ("push body");
+
+# 8 0x000000000042BF95 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (109):
+
+    107: 
+    108:     cpu.fillprog ("output/1.txt");
+=>  109:     cpu.run ();
+    110:     }
+    111: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:31:15, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:31:20
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7EB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::out_of_range, what(): "vector::_M_range_check: __n (which is 15) >= this->size() (which is 15)", его адрес 0x000000000078D850.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x149C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7EB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000531E32 in W:\craft-place\DSA\cool\assmblr\executer.exe: __cxa_throw()
+# 3 0x0000000000529385 in W:\craft-place\DSA\cool\assmblr\executer.exe: std::__throw_out_of_range_fmt()
+
+# 4 0x00000000004AEE56 in W:\craft-place\DSA\cool\assmblr\executer.exe: _M_range_check() at W:/craft-place/DSA/cool/assmblr/executer.cpp (110):
+
+    108:     cpu.fillprog ("output/1.txt");
+    109:     cpu.run ();
+=>  110:     }
+    111: 
+    112: 
+
+# 5 0x00000000005240E0 in W:\craft-place\DSA\cool\assmblr\executer.exe: at() at W:/craft-place/DSA/cool/assmblr/executer.cpp (110):
+
+    108:     cpu.fillprog ("output/1.txt");
+    109:     cpu.run ();
+=>  110:     }
+    111: 
+    112: 
+
+# 6 0x000000000042BEC6 in W:\craft-place\DSA\cool\assmblr\executer.exe: get_par() at W:/craft-place/DSA/cool/assmblr/executer.cpp (90):
+
+     88:     printf ("COUNTER = %d, parn = %d, (counter + (parn)*2 = %d\n", counter, parn, (counter + (parn)*2));
+     89: 
+=>   90:     if (program_.at(counter + (parn)*2 - 1)) { return program_.at(counter + (parn)*2); }
+     91: 
+     92:     return register_.at(program_.at(counter + (parn)*2));
+
+# 7 0x000000000042AA31 in W:\craft-place\DSA\cool\assmblr\executer.exe: run() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCOUNTER(N) COUNTER = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 8 0x000000000042BF89 in W:\craft-place\DSA\cool\assmblr\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/executer.cpp (109):
+
+    107: 
+    108:     cpu.fillprog ("output/1.txt");
+=>  109:     cpu.run ();
+    110:     }
+    111: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 17:33:09, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 17:33:14
+
+Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------

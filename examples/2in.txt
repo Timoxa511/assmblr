@@ -1,0 +1,9 @@
+in 
+in 
+in 
+mul
+dump
+out 
+out
+dump
+hlt

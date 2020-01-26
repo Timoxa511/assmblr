@@ -1,0 +1,928 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 146, функция: int main(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "translate ("examples/example" "3" "in.txt")".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-05 00:00:00 +0300], Instance: 0x00000000005748C0 (64-bit), Flags: Cmdre0, Thread: 0x848 (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040F1A7 in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9326)
+
+# 1 0x0000000000427F5B in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (146):
+
+    144:     {
+    145:     TEST(1);
+=>  146:     TEST(3);
+    147:     }
+    148: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-05 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan  6 2020 00:48:00, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 06 2020 00:48:07
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 41, функция: bool translate(char*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "_in".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-05 00:00:00 +0300], Instance: 0x00000000005748C0 (64-bit), Flags: Cmdre0, Thread: 0x1048 (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040F1A7 in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9326)
+
+# 1 0x00000000004278FB in W:\craft-place\DSA\cool\assmblr\translator.exe: translate() at W:/craft-place/DSA/cool/assmblr/translator.cpp (41):
+
+     39: 
+     40:     FILE*   _in = fopen (fname, "r");
+=>   41:     assert (_in);
+     42: 
+     43: 
+
+# 2 0x0000000000427F6B in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (155):
+
+    153: int main (int argc, char *argv[])   // --test ?*                     //массив имен, параметры проги, маски и ключ --test
+    154:     {
+=>  155:     TEST(1);
+    156:     TEST(2);
+    157:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-05 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 11 2020 21:52:06, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 11 2020 21:52:12
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 33, функция: bool Translator::translate_(const char*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "_in".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-16 00:00:00 +0300], Instance: 0x000000000057B8C8 (64-bit), Flags: Cmdre0, Thread: 0x129C (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000041018D in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9625)
+
+# 1 0x0000000000429741 in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/translator.cpp (33):
+
+     31:     assert (fname);
+     32:     FILE*   _in = fopen (fname, "r");
+=>   33:     assert (_in);
+     34: 
+     35: 
+
+# 2 0x0000000000457010 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (155):
+
+    153:     TEST(1);
+    154:     TEST(2);
+=>  155:     }
+    156: 
+    157: //syntax error tests
+
+# 3 0x000000000042A776 in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (146):
+
+    144:     Translator translator;  //dont change name
+    145: 
+=>  146:     translator.proccess("input/1");
+    147:     }
+    148: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-16 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 23 2020 21:23:31, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 23 2020 21:23:38
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 49, функция: void Translator::read_par(char*, int, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "keys >= 0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x9B8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9682)
+
+# 1 0x000000000042A824 in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (49):
+
+     47: void Translator::read_par (char* buf, int nchars, int keys)
+     48:     {
+=>   49:     assert (keys >= 0);
+     50:     int par = -1;
+     51:     int parnchars = -1;
+
+# 2 0x000000000042ACC3 in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCUR(N) CUR = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 3 0x0000000000458050 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (197):
+
+    195:     TEST(1);
+    196:     TEST(2);
+=>  197:     }
+    198: 
+    199: //syntax error tests
+
+# 4 0x000000000042B778 in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (188):
+
+    186:     Translator translator;  //dont change name
+    187: 
+=>  188:     translator.proccess("input/1.txt");
+    189:     }
+    190: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 22:03:57, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 22:04:03
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 59, функция: void Translator::read_par(char*, int, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "sscanf (buf + nchars, "%s%n", str, &parnchars) == 2".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1C0C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A8C9 in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (59):
+
+     57: 
+     58:         char str [20] = "";
+=>   59:         assert (sscanf (buf + nchars, "%s%n", str, &parnchars) == 2);
+     60: 
+     61:         if      (stricmp (str, REGS::AX) == 0) { par = REGS::AXKEYNUM; }
+
+# 2 0x000000000042AC2B in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCUR(N) CUR = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 3 0x0000000000457F50 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (200):
+
+    198:     TEST(1);
+    199:     TEST(2);
+=>  200:     }
+    201: 
+    202: //syntax error tests
+
+# 4 0x000000000042B680 in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (191):
+
+    189:     Translator translator;  //dont change name
+    190: 
+=>  191:     translator.proccess("input/1.txt");
+    192:     }
+    193: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:15:30, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:15:36
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 59, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "sscanf (buf + *nchars, "%s%n", str, &parnchars) == 2".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1B18 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A8CF in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (59):
+
+     57: 
+     58:         char str [20] = "";
+=>   59:         assert (sscanf (buf + *nchars, "%s%n", str, &parnchars) == 2);
+     60: 
+     61:         if      (stricmp (str, REGS::AX) == 0) { par = REGS::AXKEYNUM; }
+
+# 2 0x000000000042AC40 in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCUR(N) CUR = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 3 0x0000000000457F70 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (200):
+
+    198:     TEST(1);
+    199:     TEST(2);
+=>  200:     }
+    201: 
+    202: //syntax error tests
+
+# 4 0x000000000042B6A6 in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (191):
+
+    189:     Translator translator;  //dont change name
+    190: 
+=>  191:     translator.proccess("input/1.txt");
+    192:     }
+    193: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:21:49, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:21:56
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 65, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057C8D0 (64-bit), Flags: Cmdre0, Thread: 0x1BE0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A975 in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (65):
+
+     63:         else if (stricmp (str, REGS::CX) == 0) { par = REGS::CXKEYNUM; }
+     64:         else if (stricmp (str, REGS::DX) == 0) { par = REGS::DXKEYNUM; }
+=>   65:         else assert (0);
+     66:         }
+     67:     else
+
+# 2 0x000000000042AC30 in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (17):
+
+     15:     })
+     16: 
+=>   17: CMD_ (POP,  2,  1,  1,
+     18:     {
+     19:     int popper = stack.top();
+
+# 3 0x0000000000457F00 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (200):
+
+    198:     TEST(1);
+    199:     TEST(2);
+=>  200:     }
+    201: 
+    202: //syntax error tests
+
+# 4 0x000000000042B62E in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (191):
+
+    189:     Translator translator;  //dont change name
+    190: 
+=>  191:     translator.proccess("input/1.txt");
+    192:     }
+    193: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:25:44, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:25:52
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 65, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1E04 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A975 in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (65):
+
+     63:         else if (stricmp (str, REGS::CX) == 0) { par = REGS::CXKEYNUM; }
+     64:         else if (stricmp (str, REGS::DX) == 0) { par = REGS::DXKEYNUM; }
+=>   65:         else assert (0);
+     66:         }
+     67:     else
+
+# 2 0x000000000042AC64 in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (17):
+
+     15:     })
+     16: 
+=>   17: CMD_ (POP,  2,  1,  1,
+     18:     {
+     19:     int popper = stack.top();
+
+# 3 0x00000000004580D0 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (204):
+
+    202:     TEST(1);
+    203:     TEST(2);
+=>  204:     }
+    205: 
+    206: //syntax error tests
+
+# 4 0x000000000042B802 in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (195):
+
+    193:     Translator translator;  //dont change name
+    194: 
+=>  195:     translator.proccess("input/1.txt");
+    196:     }
+    197: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:31:40, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:31:47
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 65, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1604 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A975 in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (65):
+
+     63:         else if (stricmp (str, REGS::CX) == 0) { par = REGS::CXKEYNUM; }
+     64:         else if (stricmp (str, REGS::DX) == 0) { par = REGS::DXKEYNUM; }
+=>   65:         else assert (0);
+     66:         }
+     67:     else
+
+# 2 0x000000000042ACA8 in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (17):
+
+     15:     })
+     16: 
+=>   17: CMD_ (POP,  2,  1,  1,
+     18:     {
+     19:     int popper = stack.top();
+
+# 3 0x0000000000458330 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (204):
+
+    202:     TEST(1);
+    203:     TEST(2);
+=>  204:     }
+    205: 
+    206: //syntax error tests
+
+# 4 0x000000000042BA62 in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (195):
+
+    193:     Translator translator;  //dont change name
+    194: 
+=>  195:     translator.proccess("input/1.txt");
+    196:     }
+    197: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:33:50, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:33:56
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 65, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1A50 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A975 in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (65):
+
+     63:         else if (stricmp (str, REGS::CX) == 0) { par = REGS::CXKEYNUM; }
+     64:         else if (stricmp (str, REGS::DX) == 0) { par = REGS::DXKEYNUM; }
+=>   65:         else assert (0);
+     66:         }
+     67:     else
+
+# 2 0x000000000042ACBB in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (17):
+
+     15:     })
+     16: 
+=>   17: CMD_ (POP,  2,  1,  1,
+     18:     {
+     19:     int popper = stack.top();
+
+# 3 0x0000000000458340 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (206):
+
+    204:     TEST(1);
+    205:     TEST(2);
+=>  206:     }
+    207: 
+    208: //syntax error tests
+
+# 4 0x000000000042BA74 in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (197):
+
+    195:     Translator translator;  //dont change name
+    196: 
+=>  197:     translator.proccess("input/1.txt");
+    198:     }
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:37:05, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:37:12
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 65, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1940 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A975 in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (65):
+
+     63:         else if (stricmp (str, REGS::CX) == 0) { par = REGS::CXKEYNUM; }
+     64:         else if (stricmp (str, REGS::DX) == 0) { par = REGS::DXKEYNUM; }
+=>   65:         else assert (0);
+     66:         }
+     67:     else
+
+# 2 0x000000000042ACBB in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (17):
+
+     15:     })
+     16: 
+=>   17: CMD_ (POP,  2,  1,  1,
+     18:     {
+     19:     int popper = stack.top();
+
+# 3 0x0000000000458340 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (206):
+
+    204:     TEST(1);
+    205:     TEST(2);
+=>  206:     }
+    207: 
+    208: //syntax error tests
+
+# 4 0x000000000042BA74 in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (197):
+
+    195:     Translator translator;  //dont change name
+    196: 
+=>  197:     translator.proccess("input/1.txt");
+    198:     }
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:37:30, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:37:36
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 59, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "sscanf (buf + *nchars, "%s%n", &str, &parnchars) == 2".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x179C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A8CF in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (59):
+
+     57: 
+     58:         char str [20] = "";
+=>   59:         assert (sscanf (buf + *nchars, "%s%n", &str, &parnchars) == 2);
+     60: 
+     61:         if      (stricmp (str, REGS::AX) == 0) { par = REGS::AXKEYNUM; }
+
+# 2 0x000000000042AC8F in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCUR(N) CUR = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 3 0x00000000004583C0 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (206):
+
+    204:     TEST(1);
+    205:     TEST(2);
+=>  206:     }
+    207: 
+    208: //syntax error tests
+
+# 4 0x000000000042BAEC in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (197):
+
+    195:     Translator translator;  //dont change name
+    196: 
+=>  197:     translator.proccess("input/1.txt");
+    198:     }
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:40:58, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:41:04
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 59, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "sscanf (buf + *nchars, "%s%n", &str, &parnchars) == 2".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1C98 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A8CF in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (59):
+
+     57: 
+     58:         char str [20] = "";
+=>   59:         assert (sscanf (buf + *nchars, "%s%n", &str, &parnchars) == 2);
+     60: 
+     61:         if      (stricmp (str, REGS::AX) == 0) { par = REGS::AXKEYNUM; }
+
+# 2 0x000000000042AC8F in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCUR(N) CUR = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 3 0x00000000004583C0 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (206):
+
+    204:     TEST(1);
+    205:     TEST(2);
+=>  206:     }
+    207: 
+    208: //syntax error tests
+
+# 4 0x000000000042BAEC in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (197):
+
+    195:     Translator translator;  //dont change name
+    196: 
+=>  197:     translator.proccess("input/1.txt");
+    198:     }
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:40:58, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:41:41
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 60, функция: void Translator::read_par(char*, int*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "sscanf (buf + *nchars, "%s%n", &str, &parnchars) == 2".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1D08 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042A8ED in W:\craft-place\DSA\cool\assmblr\translator.exe: read_par() at W:/craft-place/DSA/cool/assmblr/translator.cpp (60):
+
+     58:         char str [20] = "";
+     59:         printf ("read_par: buf = %s", buf + *nchars);
+=>   60:         assert (sscanf (buf + *nchars, "%s%n", &str, &parnchars) == 2);
+     61: 
+     62:         if      (stricmp (str, REGS::AX) == 0) { par = REGS::AXKEYNUM; }
+
+# 2 0x000000000042ACAD in W:\craft-place\DSA\cool\assmblr\translator.exe: translate_() at W:/craft-place/DSA/cool/assmblr/commmands.h (11):
+
+      9: #define SETCUR(N) CUR = (N)
+     10: 
+=>   11: CMD_ (PUSH, 1,  1,  2,
+     12:     {
+     13:     if (PAR(1)) stack_.push_back(PAR(2));
+
+# 3 0x00000000004583E0 in W:\craft-place\DSA\cool\assmblr\translator.exe: proccess() at W:/craft-place/DSA/cool/assmblr/translator.cpp (207):
+
+    205:     TEST(1);
+    206:     TEST(2);
+=>  207:     }
+    208: 
+    209: //syntax error tests
+
+# 4 0x000000000042BB0A in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (198):
+
+    196:     Translator translator;  //dont change name
+    197: 
+=>  198:     translator.proccess("input/1.txt");
+    199:     }
+    200: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 25 2020 23:45:36, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 25 2020 23:45:43
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 184, функция: void Test(Translator*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "in_example".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1030 (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042B993 in W:\craft-place\DSA\cool\assmblr\translator.exe: Test() at W:/craft-place/DSA/cool/assmblr/translator.cpp (184):
+
+    182:         sprintf (in_example_name, "examples/%din.txt", i);      //open example in
+    183:         FILE* in_example = fopen (in_example_name, "r");
+=>  184:         assert (in_example);
+    185: 
+    186:         char out_example_name [] = "";
+
+# 2 0x000000000042BCEB in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (233):
+
+    231:     if (argc <= 1) { $sr; printf ("input error"); return 0; }
+    232: 
+=>  233:     if (argc == 2 && stricmp(argv[1], "--test") == 0) { Test(&translator, 2); return 1; }
+    234: 
+    235:     for (int i = 1; i < argc; i++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 16:40:51, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 16:42:10
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\translator.exe, файл: W:\craft-place\DSA\cool\assmblr\translator.cpp, строка: 184, функция: void Test(Translator*, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "in_example".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1804 (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FEA in W:\craft-place\DSA\cool\assmblr\translator.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9685)
+
+# 1 0x000000000042B993 in W:\craft-place\DSA\cool\assmblr\translator.exe: Test() at W:/craft-place/DSA/cool/assmblr/translator.cpp (184):
+
+    182:         sprintf (in_example_name, "examples/%din.txt", i);      //open example in
+    183:         FILE* in_example = fopen (in_example_name, "r");
+=>  184:         assert (in_example);
+    185: 
+    186:         char out_example_name [] = "";
+
+# 2 0x000000000042BCEB in W:\craft-place\DSA\cool\assmblr\translator.exe: main() at W:/craft-place/DSA/cool/assmblr/translator.cpp (233):
+
+    231:     if (argc <= 1) { $sr; printf ("input error"); return 0; }
+    232: 
+=>  233:     if (argc == 2 && stricmp(argv[1], "--test") == 0) { Test(&translator, 2); return 1; }
+    234: 
+    235:     for (int i = 1; i < argc; i++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2020-01-22 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Jan 26 2020 16:40:51, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Jan 26 2020 16:43:18
+
+Run file:	W:\craft-place\DSA\cool\assmblr\translator.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
