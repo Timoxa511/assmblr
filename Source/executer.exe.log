@@ -1440,3 +1440,4043 @@ Run file:	W:\craft-place\DSA\cool\assmblr\executer.exe
 Directory:	W:\craft-place\DSA\cool\assmblr
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\Source\executer.cpp, строка: 39, функция: size_t FSize(FILE*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "fseek(file, 0, SEEK_END)".
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057B8D0 (64-bit), Flags: Cmdre0, Thread: 0x123C (Main). 
+From: C:\Program Files (x86)\TX\TXLib.h (11159) const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FE9 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9664)
+
+# 1 0x000000000042AF7F in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: FSize() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (39):
+
+     37:     assert (file);
+     38: 
+=>   39:     assert( fseek(file, 0, SEEK_END) );
+     40: 
+     41:     size_t sz = ftell(file);
+
+# 2 0x000000000042B0CA in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: import_() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (61):
+
+     59: 
+     60: 
+=>   61:     fread (program_.data(), sizeof(BYTE), FSize(exe), exe);     //bin fmt
+     62: 
+     63:     return 1;
+
+# 3 0x000000000045D8A0 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: proccess() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (149):
+
+    147: 
+    148:     return 1;
+=>  149:     }
+    150: 
+    151: 
+
+# 4 0x000000000042BF7D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (146):
+
+    144: 
+    145:     CPU cpu;
+=>  146:     cpu.proccess (exe);
+    147: 
+    148:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 15:43:56, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 15:44:53
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\exe
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\Source\executer.cpp, строка: 39, функция: size_t FSize(FILE*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "fseek(file, 0, SEEK_END)".
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057B8D0 (64-bit), Flags: Cmdre0, Thread: 0xC90 (Main). 
+From: C:\Program Files (x86)\TX\TXLib.h (11159) const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FE9 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9664)
+
+# 1 0x000000000042AF7F in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: FSize() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (39):
+
+     37:     public:
+     38:     CPU () : stack_(), program_(), register_() {}
+=>   39: 
+     40:     //DSL
+     41:     size_t fillCmdPars_ (int* cmd, size_t npars, size_t counter);
+
+# 2 0x000000000042B0CA in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: import_() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (61):
+
+     59: 
+     60:     for (int i = 0; i < npars; i++)
+=>   61:         {
+     62:         if (program_[counter] & 1)
+     63:             {
+
+# 3 0x000000000045D8A0 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: proccess() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (149):
+
+    147:     FILE* exe = fopen (argv[1], "rb");
+    148:     assert (exe);
+=>  149: 
+    150:     CPU cpu;
+    151:     cpu.process (exe);
+
+# 4 0x000000000042BF7D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (146):
+
+    144:     {
+    145:     if (argc != 2) { $sr; printf ("input error"); return 0; }
+=>  146: 
+    147:     FILE* exe = fopen (argv[1], "rb");
+    148:     assert (exe);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 15:43:56, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 15:54:55
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\exe
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\Source\executer.cpp, строка: 96, функция: int CPU::import_(FILE*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "FSize(exe) <= program_.size()".
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057B8D0 (64-bit), Flags: Cmdre0, Thread: 0x191C (Main). 
+From: C:\Program Files (x86)\TX\TXLib.h (11159) const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FE9 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9664)
+
+# 1 0x000000000042B25C in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: import_() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (96):
+
+     94:     //    }
+     95: 
+=>   96:     assert (FSize(exe) <= program_.size());
+     97: 
+     98:     fread (program_.data(), sizeof(BYTE), FSize(exe), exe);     //bin fmt
+
+# 2 0x000000000045D940 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (155):
+
+    153: 
+    154:     return 1;
+=>  155:     }
+    156: 
+    157: 
+
+# 3 0x000000000042C012 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (152):
+
+    150: 
+    151:     CPU cpu;
+=>  152:     cpu.process (exe);
+    153: 
+    154:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 15:58:27, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 15:58:45
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\exe
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3BF в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x15C8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3BF in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E01D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (155):
+
+    153: 
+    154:     return 1;
+=>  155:     }
+    156: 
+    157: 
+
+# 2 0x000000000042C06C in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (152):
+
+    150: 
+    151:     CPU cpu;
+=>  152:     cpu.process (exe);
+    153: 
+    154:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:45:23, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:46:08
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3BF в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x15C8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3BF in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E01D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (155):
+
+    153: 
+    154:     return 1;
+=>  155:     }
+    156: 
+    157: 
+
+# 2 0x000000000042C06C in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (152):
+
+    150: 
+    151:     CPU cpu;
+=>  152:     cpu.process (exe);
+    153: 
+    154:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:45:23, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:46:08
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1144 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:49:12
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1144 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:49:11
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x390 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:56:41
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x390 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:56:40
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1898 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:57:33
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1898 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:57:34
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1B38 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:57:55
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1B38 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:57:55
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1308 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:58:55
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1308 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:58:55
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x14D4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:59:39
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x14D4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 17:59:38
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1948 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 21:44:05
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042B3D2 в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 12. Попытка прочесть данные по адресу 0x0000000000000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1948 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042B3D2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (12):
+
+     10: //CMD_(NAME, ID, NPARS, BODY)  headers
+     11: 
+=>   12: CMD_ (PUSH, 1,  1,
+     13:     {
+     14:     stack_.push_back(PAR(1));
+
+# 1 0x000000000045E15D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C1AB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 17:49:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 21:44:05
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x00000000008CD800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x171C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x00000000005329C2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E72D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BEEB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (124):
+
+    122:     })
+    123: 
+=>  124: CMD_ (JE,   13, 1,  //jump if equal
+    125:     {
+    126:     int a = stack_.top();
+
+# 5 0x000000000045E5AD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C5FB in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 22:46:01, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:02:48
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x00000000007CD800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1D08 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532A42 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E7AD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BF3B in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E62D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C673 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:05:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:05:50
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1D0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532A42 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E7AD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BF3B in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E62D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C673 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:05:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:09:16
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000079D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1D9C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BFBD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:16:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:16:43
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000079D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x93C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BFBD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:16:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:19:02
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0xD6C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BFBD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:16:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:19:52
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000079D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1BB4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BFBD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:16:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:29:29
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x17B8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BFBD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:16:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:33:24
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1308 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BFBD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:42:12
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD7FB87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000079D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1F6C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD7FB87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042BFBD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (125):
+
+    123:     })
+    124: 
+=>  125: CMD_ (JE,   13, 1,  //jump if equal
+    126:     {
+    127:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:44:10
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042BEEC в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 120. Попытка прочесть данные по адресу 0x0000000000000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1F44 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042BEEC in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (120):
+
+    118:     })
+    119: 
+=>  120: CMD_ (JMP,  12, 1,
+    121:     {
+    122:     SETCOUNTER(PAR(1));
+
+# 1 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:45:21
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042BEEC в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 120. Попытка прочесть данные по адресу 0x0000000000000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1F44 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042BEEC in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (120):
+
+    118:     })
+    119: 
+=>  120: CMD_ (JMP,  12, 1,
+    121:     {
+    122:     SETCOUNTER(PAR(1));
+
+# 1 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 09 2020 23:45:20
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042BEEC в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 120. Попытка прочесть данные по адресу 0x0000000000000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0xE64 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042BEEC in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (120):
+
+    118:     })
+    119: 
+=>  120: CMD_ (JMP,  12, 1,
+    121:     {
+    122:     SETCOUNTER(PAR(1));
+
+# 1 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:24:38
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042BEEC в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 120. Попытка прочесть данные по адресу 0x0000000000000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0xE64 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042BEEC in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (120):
+
+    118:     })
+    119: 
+=>  120: CMD_ (JMP,  12, 1,
+    121:     {
+    122:     SETCOUNTER(PAR(1));
+
+# 1 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:24:39
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\Source\executer.cpp, строка: 151, функция: int main(int, char**),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "exe".
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x12E8 (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+From: C:\Program Files (x86)\TX\TXLib.h (11159) const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FE9 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9664)
+
+# 1 0x000000000042C6EA in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (151):
+
+    149: 
+    150:     FILE* exe = fopen (argv[1], "rb");
+=>  151:     assert (exe);
+    152: 
+    153:     CPU cpu;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:27:04
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\Source\executer.cpp, строка: 151, функция: int main(int, char**),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "exe".
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x730 (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+From: C:\Program Files (x86)\TX\TXLib.h (11159) const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FE9 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9664)
+
+# 1 0x000000000042C6EA in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (151):
+
+    149: 
+    150:     FILE* exe = fopen (argv[1], "rb");
+=>  151:     assert (exe);
+    152: 
+    153:     CPU cpu;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:28:53
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\Source\executer.cpp, строка: 151, функция: int main(int, char**),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "exe".
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x143C (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+From: C:\Program Files (x86)\TX\TXLib.h (11159) const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FE9 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9664)
+
+# 1 0x000000000042C6EA in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (151):
+
+    149: 
+    150:     FILE* exe = fopen (argv[1], "rb");
+=>  151:     assert (exe);
+    152: 
+    153:     CPU cpu;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:34:20
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe, файл: W:\craft-place\DSA\cool\assmblr\Source\executer.cpp, строка: 151, функция: int main(int, char**),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "exe".
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x16F0 (Main), GetLastError(): 2 (Не удается найти указанный файл), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+From: C:\Program Files (x86)\TX\TXLib.h (11159) const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0000000000410FE9 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: _txError() at C:/Program Files (x86)/TX/TXLib.h (9664)
+
+# 1 0x000000000042C6EA in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (151):
+
+    149: 
+    150:     FILE* exe = fopen (argv[1], "rb");
+=>  151:     assert (exe);
+    152: 
+    153:     CPU cpu;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:34:28
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042BEEC в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 120. Попытка прочесть данные по адресу 0x0000000000000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x15F0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042BEEC in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (120):
+
+    118:     })
+    119: 
+=>  120: CMD_ (JMP,  12, 1,
+    121:     {
+    122:     SETCOUNTER(PAR(1));
+
+# 1 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:34:39
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042BEEC в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 120. Попытка прочесть данные по адресу 0x0000000000000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x15F0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042BEEC in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (120):
+
+    118:     })
+    119: 
+=>  120: CMD_ (JMP,  12, 1,
+    121:     {
+    122:     SETCOUNTER(PAR(1));
+
+# 1 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:34:38
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042BEEC в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 120. Попытка прочесть данные по адресу 0x0000000000000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x858 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042BEEC in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (120):
+
+    118:     })
+    119: 
+=>  120: CMD_ (JMP,  12, 1,
+    121:     {
+    122:     SETCOUNTER(PAR(1));
+
+# 1 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:35:45
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000000042BEEC в функции run_() в файле W:/craft-place/DSA/cool/assmblr/Source/commmands.h на строке 120. Попытка прочесть данные по адресу 0x0000000000000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x858 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000042BEEC in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (120):
+
+    118:     })
+    119: 
+=>  120: CMD_ (JMP,  12, 1,
+    121:     {
+    122:     SETCOUNTER(PAR(1));
+
+# 1 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 2 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb  9 2020 23:41:54, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:35:44
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000079D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0xCFC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:43:17
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0xE3C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:46:25
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x598 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:53:13
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000079D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x15E4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106: $       stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107: $       txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 16:55:02
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x00000000008FD800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x678 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106:         stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107:         txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 17:00:45
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x0000000000AA8CD0.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x16FC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106:         stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107:         txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 17:01:42
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000094D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1590 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106:         stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107:         txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 17:02:39
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1454 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106:         stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107:         txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 17:07:12
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1198 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106:         stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107:         txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 17:07:59
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x1A00 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532AF2 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E85D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C343 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (161):
+
+    159:     })
+    160: 
+=>  161: CMD_ (JNA,  16, 1,
+    162:     {
+    163:     int a = stack_.top();
+
+# 5 0x000000000045E6DD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C727 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Program Files (x86)\TX\TXLib.h (11107):
+
+  11105:         {
+  11106:         stkTrace = ((options & traceSE) && *_txTraceSE)? _txTraceSE : _txCaptureStackBackTrace   (2, true);
+=>11107:         txTrace  =                                                    _txCaptureStackBackTraceTX (0, true);
+  11108:         }
+  11109: 
+
+# 1 in int CPU::run_() at W:\craft-place\DSA\cool\assmblr\Source\commmands.h (33):
+
+     31: CMD_ (OUT,  4,  0,
+     32:     {
+=>   33:     $sg;
+     34:     if (stack_.empty()) { printf ("empty\n"); break; }
+     35: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 15 2020 16:42:32, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 15 2020 17:09:06
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x00000000007ED800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x2294 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532732 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E49D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 4 0x000000000042C09D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (209):
+
+    207: 
+    208: CMD_ (RET,  20, 0,
+=>  209:     {
+    210:     SETCOUNTER (stack_.top());
+    211: 
+
+# 5 0x000000000045E32D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (157):
+
+    155: 
+    156:     return 1;
+=>  157:     }
+    158: 
+    159: 
+
+# 6 0x000000000042C227 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (154):
+
+    152: 
+    153:     CPU cpu;
+=>  154:     cpu.process (exe);
+    155: 
+    156:     return 1;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 23 2020 18:08:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 23 2020 18:26:49
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: W:\craft-place\DSA\cool\assmblr\Source\executer.exe,
+
+ВНЕЗАПНО: std::terminate(): Неперехваченное исключение в функции main() или в деструкторе, или другая фатальная ошибка C++. Исключение С++, вызванное оператором throw.
+
+#1: Исключение EXCEPTION_CPP_GCC (0x20474343) при выполнении кода по адресу 0x000007FEFD68B87D в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Объект исключения C++: std::logic_error, what(): "stack is empty", его адрес 0x000000000032D800.
+
+Используйте try/catch блоки, перехватывайте catch (...), проверяйте вызовы виртуальных функций, разбирайтесь, в чем дело.
+
+С помощью std::set_terminate() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400], Instance: 0x000000000057D8D0 (64-bit), Flags: Cmdre0, Thread: 0x21DC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000007FEFD68B87D in C:\Windows\system32\KERNELBASE.dll: RaiseException()
+# 2 0x0000000000532952 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: __cxa_throw()
+
+# 3 0x000000000045E6BD in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: top() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (163):
+
+    161: 
+    162:     return 1;
+=>  163:     }
+    164: 
+    165: 
+
+# 4 0x000000000042AE38 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: run_() at W:/craft-place/DSA/cool/assmblr/Source/commmands.h (18):
+
+     16:     })
+     17: 
+=>   18: CMD_ (POP,   0x02,  1,
+     19:     {
+     20:     int popper = stack_.top();
+
+# 5 0x000000000045E54D in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: process() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (163):
+
+    161: 
+    162:     return 1;
+=>  163:     }
+    164: 
+    165: 
+
+# 6 0x000000000042C434 in W:\craft-place\DSA\cool\assmblr\Source\executer.exe: main() at W:/craft-place/DSA/cool/assmblr/Source/executer.cpp (160):
+
+    158: 
+    159:     CPU cpu;
+=>  160:     cpu.process (exe);
+    161: 
+    162:     return 1;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 165, Date: 2020-02-05 09:35:12 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Program Files (x86)\TX\TXLib.h
+Compiled:	Feb 24 2020 23:20:25, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Feb 25 2020 00:28:30
+
+Run file:	W:\craft-place\DSA\cool\assmblr\Source\executer.exe
+Directory:	W:\craft-place\DSA\cool\assmblr\Source
+
+--------------------------------------------------

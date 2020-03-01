@@ -1,1 +1,0 @@
-@ start "" "Source/executer.exe" %*

@@ -1,15 +1,7 @@
-push 4
-push 5
-dump
-add
-dump
+1:
+push 1 
 in
-in
-dump
-add
-add
-dump
-meow 5
+je 2:
+jmp 1:
+2:
 hlt
-
-

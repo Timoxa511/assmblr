@@ -1,33 +1,35 @@
 #define REG(REGN)   register_.at(REGN)
 
-#define PAR(PARN)   get_par(COUNTER, PARN)
-#define TYPE(PARN)  get
+#define PAR(PARN)   *cmdpars[PARN] //assert parn < npars ;(((
 
-#define READPARFROMCONSOLE  readparfromconsole()
+#define READPARFROMCONSOLE  readparfromconsole_()
 
+#define GETCOUNTER COUNTER // not const((
 
 #define SETCOUNTER(N) COUNTER = (N)
 
-CMD_ (PUSH, 1,  1,  2,
+//CMD_(NAME, ID, NPARS, BODY)  headers
+
+CMD_ (PUSH,  0x01,  1,
     {
-    stack_.push_back(PAR(1));
+    stack_.push_back(PAR(0));
     })
 
-CMD_ (POP,  2,  1,  1,
+CMD_ (POP,   0x02,  1,
     {
     int popper = stack_.top();
 
     stack_.pop_back();
 
-    REG(PAR(1)) = popper;
+    PAR(0) = popper;
     })
 
-CMD_ (IN ,  3,  0,  0,
+CMD_ (IN ,   0x03,  0,
     {
     stack_.push_back(READPARFROMCONSOLE);
     })
 
-CMD_ (OUT,  4,  0,  0,
+CMD_ (OUT,   0x04,  0,
     {
     if (stack_.empty()) { printf ("empty\n"); break; }
 
@@ -35,7 +37,7 @@ CMD_ (OUT,  4,  0,  0,
     stack_.pop_back ();
     })
 
-CMD_ (ADD,  5,  0,  0,
+CMD_ (ADD,   0x05,  0,
     {
     if (stack_.size() < 2) { printf ("too few elements to execute\n"); break; }
 
@@ -52,7 +54,7 @@ CMD_ (ADD,  5,  0,  0,
 
     })
 
-CMD_ (SUB,  6,  0,  0,
+CMD_ (SUB,   0x06,  0,
     {
     if (stack_.size() < 2) {  printf ("too few elements to execute\n"); break; }
 
@@ -67,7 +69,7 @@ CMD_ (SUB,  6,  0,  0,
     stack_.push_back (push);
     })
 
-CMD_ (MUL,  7,  0,  0,
+CMD_ (MUL,   0x07,  0,
     {
     if (stack_.size() < 2) {  printf ("too few elements to execute\n"); break; }
 
@@ -83,7 +85,7 @@ CMD_ (MUL,  7,  0,  0,
 
     })
 
-CMD_ (DIV,  8,  0,  0,
+CMD_ (DIV,   0x08,  0,
     {
     if (stack_.size() < 2) {  printf ("too few elements to execute\n"); break; }
 
@@ -99,40 +101,29 @@ CMD_ (DIV,  8,  0,  0,
 
     })
 
-CMD_ (HLT,  9,  0,  0,
+CMD_ (HLT,   0x09,  0,
     {
+    $d;
     printf ("program ended successfully");
     return 1;
     })
 
-CMD_ (DUMP, 10, 0,  0,
+CMD_ (DUMP,  0x0A, 0,
     {
     stack_.dump();
     })
 
-CMD_ (MEOW, 11, 1,  1,
+CMD_ (MEOW,  0x0B, 1,
     {
     for (int i = 0; i < PAR(1); i++) printf ("MEOW\n");
     })
 
-CMD_ (JMP,  12, 1,  1,
+CMD_ (JMP,   0x0C, 1,
     {
-    SETCOUNTER(PAR(1));
+    SETCOUNTER(PAR(0));
     })
 
-CMD_ (JE,   13, 1,  1, //jump if equal
-    {
-    int a = stack_.top();
-    stack_.pop_back();
-
-
-    int b = stack_.top();
-    stack_.pop_back();
-
-    if (a == b) SETCOUNTER(PAR(1));
-    })
-
-CMD_ (JNE,  14, 1,  1,
+CMD_ (JE,    0x0D, 1,  //Jump_if_Equal
     {
     int a = stack_.top();
     stack_.pop_back();
@@ -141,10 +132,10 @@ CMD_ (JNE,  14, 1,  1,
     int b = stack_.top();
     stack_.pop_back();
 
-    if (a != b) SETCOUNTER(PAR(1));
+    if (a == b) SETCOUNTER(PAR(0));
     })
 
-CMD_ (JA,   15, 1,  1,
+CMD_ (JNE,   0x0E, 1,
     {
     int a = stack_.top();
     stack_.pop_back();
@@ -153,10 +144,10 @@ CMD_ (JA,   15, 1,  1,
     int b = stack_.top();
     stack_.pop_back();
 
-    if (a > b) SETCOUNTER(PAR(1));
+    if (a != b) SETCOUNTER(PAR(0));
     })
 
-CMD_ (JNA,  16, 1,  1,
+CMD_ (JA,    0x0F, 1,
     {
     int a = stack_.top();
     stack_.pop_back();
@@ -165,10 +156,10 @@ CMD_ (JNA,  16, 1,  1,
     int b = stack_.top();
     stack_.pop_back();
 
-    if (a <= b) SETCOUNTER(PAR(1));
+    if (a > b) SETCOUNTER(PAR(0));
     })
 
-CMD_ (JB,   17, 1,  1,
+CMD_ (JNA,   0x10, 1,
     {
     int a = stack_.top();
     stack_.pop_back();
@@ -177,10 +168,22 @@ CMD_ (JB,   17, 1,  1,
     int b = stack_.top();
     stack_.pop_back();
 
-    if (a < b) SETCOUNTER(PAR(1));
+    if (a <= b) SETCOUNTER(PAR(0));
     })
 
-CMD_ (JNB,  18, 1,  1,
+CMD_ (JB,    0x11, 1,
+    {
+    int a = stack_.top();
+    stack_.pop_back();
+
+
+    int b = stack_.top();
+    stack_.pop_back();
+
+    if (a < b) SETCOUNTER(PAR(0));
+    })
+
+CMD_ (JNB,   0x12, 1,
     {
     int a = stack_.top();
     stack_.pop_back();
@@ -189,13 +192,33 @@ CMD_ (JNB,  18, 1,  1,
     int b = stack_.top();
     stack_ .pop_back();
 
-    if (a >= b) SETCOUNTER(PAR(1));
+    if (a >= b) SETCOUNTER(PAR(0));
     })
 
-// JS  if its sunday
+CMD_ (CALL,  0x13, 1,
+    {
+    assert ((size_t)INT_MAX >= COUNTER);    //my_todo: type casts control
 
-//печать таблицу квадратов до введенного числа
-//2 вводитс€ число, провер€ет€, €вл€етс€ ли оно простым
+    stack_.push_back ((int) COUNTER);
+
+    SETCOUNTER (PAR(0));
+
+    })
+
+CMD_ (RET,   0x14, 0,
+    {
+    SETCOUNTER (stack_.top());
+
+    stack_.pop_back();
+
+    })
+
+CMD_ (PAUSE, 0x15, 1,
+    {
+    printf ("pause \"%d\"\n", PAR(0));
+    getch();
+    })
+
 #undef READPAR
 #undef READPARFROMCONSOLE
 

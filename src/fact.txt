@@ -1,0 +1,44 @@
+in
+
+call 1:
+
+out
+hlt
+
+
+1:
+pause 1
+
+pop ax //ret >
+pop bx //in  >
+
+push 1
+push bx
+jna 2:
+
+push 1
+push bx
+sub
+
+call 1:  // F(bx - 1)
+push bx  // bx        
+mul      // *
+
+push ax //ret <
+ret
+
+2:
+pause 2
+push 1 //base
+ret
+
+
+
+end
+
+F(1) = 1
+F(x) = x * F(x-1)
+
+
+
+

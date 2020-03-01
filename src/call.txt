@@ -1,0 +1,10 @@
+in 
+call 1:
+
+hlt
+
+1:
+pop ax
+out
+push ax
+ret

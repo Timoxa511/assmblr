@@ -1,7 +1,0 @@
-push 10
-push 20
-push ax
-pop bx
-mul
-dump
-hlt

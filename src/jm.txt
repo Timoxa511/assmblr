@@ -1,0 +1,25 @@
+in
+pop ax
+
+push 1
+
+1:
+out
+push 1
+push bx
+add
+
+pop bx
+
+push bx
+push bx
+mul
+
+pop cx
+push cx
+push ax
+push cx
+
+jna 1:
+
+hlt
